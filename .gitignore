@@ -1,6 +1,7 @@
 .DS_Store
 *.sw[mnop]
-
+server.cer
+server.key
 # Logs
 logs
 *.log
