@@ -3,6 +3,8 @@
   "description": "Boilerplate with A-Frame's 'Hello, World!' of WebVR.",
   "version": "0.3.0",
   "license": "MIT",
+  "main": "script.js",
+  "type": "module",
   "scripts": {
     "start": "budo --live --verbose --host 192.168.1.100  --port 3000 --open --ssl --cert server.cer --key server.key",
     "deploy": "ghpages",
@@ -19,5 +21,10 @@
     "aframe-scene",
     "webvr",
     "vr"
-  ]
+  ],
+  "dependencies": {
+    "csv": "^6.3.5",
+    "csv-parser": "^3.0.0",
+    "fs": "^0.0.1-security"
+  }
 }
