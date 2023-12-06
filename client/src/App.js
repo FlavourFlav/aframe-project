@@ -6,6 +6,22 @@ import 'aframe-ar';
 function App() {
 
   const [backendData, setBackendData] = useState([{}])
+
+  useEffect(() => {
+    // Create a script element
+    const script = document.createElement('script');
+    script.src = 'https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js';
+    script.async = true;
+
+    // Append the script element to the component
+    document.body.appendChild(script);
+
+    // Cleanup function to remove the script element when the component is unmounted
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   useEffect(() => {
     fetch("https://localhost:8443/data")
       .then(response => {
