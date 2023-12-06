@@ -15,7 +15,7 @@ const options = {
 
 const app = express();
 
-const allowedOrigins = ['https://localhost:3000'];
+const allowedOrigins = ['https://localhost:3000', 'https://192.168.1.100:3000'];
 app.use(cors({
   origin: function(origin, callback){
     if (!origin) {
