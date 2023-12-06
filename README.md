@@ -1,3 +1,6 @@
+Start Backend Server: npm run dev
+Start Frontend npm start
+
 # A-Frame Boilerplate
 
 Boilerplate for creating WebVR scenes with [A-Frame](https://aframe.io).
