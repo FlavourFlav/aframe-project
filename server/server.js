@@ -1,5 +1,6 @@
 const express = require('express');
 const axios = require('axios');
+const cors = require('cors');
 
 const https = require('https');
 const fs = require('fs');
@@ -13,6 +14,22 @@ const options = {
 };
 
 const app = express();
+
+const allowedOrigins = ['http://localhost:3000'];
+app.use(cors({
+  origin: function(origin, callback){
+    if (!origin) {
+      return callback(null, true);
+    }
+
+    if (!allowedOrigins.includes(origin)) {
+      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  }
+
+}));
 
 app.get('/', (req, res) => {
     res.send('Hello World!');

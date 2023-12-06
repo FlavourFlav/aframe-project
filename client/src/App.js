@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react'
 function App() {
   const [backendData, setBackendData] = useState([{}])
   useEffect(() => {
-    fetch("/api")
+    fetch("https://localhost:8443/data")
       .then(response => {
         if (response.ok) {
           return response.json();
