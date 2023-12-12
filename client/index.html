@@ -17,7 +17,7 @@
       embedded
       arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: true;"
     >
-    <a-camera gps-camera="maxDistance: 20; minDistance: 5;" rotation-reader> </a-camera>
+    <a-camera movement-controls="fly: true; easingY: 15" wasd-controls gps-camera="maxDistance: 500; minDistance: 5; simulateLatitude: 48.116915; simulateLongitude: 11.539675" rotation-reader> </a-camera>
     </a-scene>
   </body>
 </html>
