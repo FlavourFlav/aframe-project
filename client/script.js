@@ -24,7 +24,7 @@ function createSphere(latitude, longitude, color, radius) {
 }
 
 function createRedSphere(latitude, longitude) {
-  return createSphere(latitude, longitude, 'red', '1');
+  return createSphere(latitude, longitude, 'red', '3');
 }
 
 function createYellowSphere(latitude, longitude) {
@@ -32,7 +32,7 @@ function createYellowSphere(latitude, longitude) {
 }
 
 function createGreenSphere(latitude, longitude) {
-  return createSphere(latitude, longitude, 'green', '3');
+  return createSphere(latitude, longitude, 'green', '1');
 }
 
 function loadData() {
